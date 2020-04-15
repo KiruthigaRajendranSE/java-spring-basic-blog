@@ -17,7 +17,14 @@ public class PostRepository {
     }
 
     public Post findById(Long id) {
-        return null;
+    	for(Post post : ALL_POSTS) {
+    		if(post.getId().equals(id)) {
+        		return post;
+        	}
+    	}
+		return null;
+    	
+      
     }
     
     private final List<Post> ALL_POSTS = new ArrayList<>(Arrays.asList(

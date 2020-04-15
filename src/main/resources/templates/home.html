@@ -14,6 +14,7 @@
    <div class="container">
        <div class="row">
            <div class="col-sm-4 py-2 box-shadow" th:each="entry : ${posts}">
+           <a class="post-url" th:href="@{'/post/' + ${entry.getId()}}"></a>
                    <img class="card-img-top" th:src="'https://picsum.photos/id/'+${entry.getId()}+'/500/350'" alt="Post Title Image">
                <div class="card-body">
                    <div class="card-title" th:text="${entry.getTitle()}"></div>
