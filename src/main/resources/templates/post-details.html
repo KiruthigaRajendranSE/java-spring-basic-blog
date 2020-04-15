@@ -30,11 +30,9 @@
         </div>
 
         <div class="row py-3">
-            <div class="col-md-8 post-body">
+            <div class="col-md-8 post-body" th:utext="${post.getBody()}">
             
-            <h1 th:utext="${post.getBody()}">
-   
-  </h1>
+           
                
             </div>
             <aside class="col-md-4 pl-5">
