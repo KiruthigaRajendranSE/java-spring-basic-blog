@@ -31,6 +31,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		<dependency>
+    <groupId>com.newrelic.agent.java</groupId>
+    <artifactId>newrelic-agent</artifactId>
+    <version>5.11.0</version>
+</dependency>
 
 		<dependency>
 			<groupId>com.h2database</groupId>

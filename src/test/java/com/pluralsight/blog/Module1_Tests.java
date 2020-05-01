@@ -147,32 +147,25 @@ public class Module1_Tests {
 				putCalledCorrectly);
 	}
 
-	@Test
-	public void task_4() {
-		// TODO This fails after Module 3 is completed
-		Document doc = null;
-		String errorInfo = "";
-		try {
-			MvcResult result = this.mvc.perform(get("/")).andReturn();
-			MockHttpServletResponse response = result.getResponse();
-			String content = response.getContentAsString();
-
-			doc = Jsoup.parse(content);
-		} catch (Exception e) {
-			errorInfo = e.getLocalizedMessage();
-			//e.printStackTrace();
-		}
-
-		String message = "Task 4: The template has errors - " + errorInfo + ".";
-		assertNotNull(message, doc);
-
-		Elements h2Elements = doc.getElementsByTag("h2");
-
-		assertTrue("Task 4: An `<h2>` tag does not exist in the `home.html` template.",
-				h2Elements.size() > 0);
-
-		assertEquals("Task 4: An `<h2>` tag does not display the title parameter.",
-				"Blog Post 1", h2Elements.first().html());
-	}
+	/*
+	 * @Test public void task_4() { // TODO This fails after Module 3 is completed
+	 * Document doc = null; String errorInfo = ""; try { MvcResult result =
+	 * this.mvc.perform(get("/")).andReturn(); MockHttpServletResponse response =
+	 * result.getResponse(); String content = response.getContentAsString();
+	 * 
+	 * doc = Jsoup.parse(content); } catch (Exception e) { errorInfo =
+	 * e.getLocalizedMessage(); //e.printStackTrace(); }
+	 * 
+	 * String message = "Task 4: The template has errors - " + errorInfo + ".";
+	 * assertNotNull(message, doc);
+	 * 
+	 * Elements h2Elements = doc.getElementsByTag("h2");
+	 * 
+	 * assertTrue("Task 4: An `<h2>` tag does not exist in the `home.html` template."
+	 * , h2Elements.size() > 0);
+	 * 
+	 * assertEquals("Task 4: An `<h2>` tag does not display the title parameter.",
+	 * "Blog Post 1", h2Elements.first().html()); }
+	 */
 
 }
